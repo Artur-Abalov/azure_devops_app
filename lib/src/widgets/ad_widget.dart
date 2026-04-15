@@ -4,40 +4,16 @@ import 'package:azure_devops/src/models/amazon/amazon_item.dart';
 import 'package:azure_devops/src/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:url_launcher/url_launcher_string.dart';
-
-typedef AdWithKey = ({AdWithView ad, GlobalKey key});
 
 class CustomAdWidget extends StatelessWidget {
   const CustomAdWidget({required this.item});
 
-  final Object item;
+  final AmazonItem item;
 
   @override
   Widget build(BuildContext context) {
-    return switch (item) {
-      final AmazonItem amazonItem => AmazonAdWidget(item: amazonItem),
-      final AdWithKey adWithKey => NativeAdWidget(ad: adWithKey),
-      _ => const SizedBox(),
-    };
-  }
-}
-
-class NativeAdWidget extends StatelessWidget {
-  const NativeAdWidget({required this.ad});
-
-  final AdWithKey ad;
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      height: 160,
-      child: Padding(
-        padding: const EdgeInsets.only(top: 32),
-        child: AdWidget(key: ad.key, ad: ad.ad),
-      ),
-    );
+    return AmazonAdWidget(item: item);
   }
 }
 

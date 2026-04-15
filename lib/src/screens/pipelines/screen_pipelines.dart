@@ -104,7 +104,7 @@ class _PipelinesScreen extends StatelessWidget {
                   children: [
                     PipelineListTile(pipe: p, onTap: () => ctrl.goToPipelineDetail(p), isLast: p == pipelines.last),
                     CustomAdWidget(
-                      item: ctrl.ads.hasAmazonAds ? ctrl.amazonAds[adsIndex++] : ctrl.nativeAds[adsIndex++],
+                      item: ctrl.amazonAds[adsIndex++],
                     ),
                   ],
                 );

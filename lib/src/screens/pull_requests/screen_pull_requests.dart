@@ -89,7 +89,7 @@ class _PullRequestsScreen extends StatelessWidget {
               return Column(
                 children: [
                   PullRequestListTile(pr: pr, onTap: () => ctrl.goToPullRequestDetail(pr), isLast: pr == prs.last),
-                  CustomAdWidget(item: ctrl.ads.hasAmazonAds ? ctrl.amazonAds[adsIndex++] : ctrl.nativeAds[adsIndex++]),
+                  CustomAdWidget(item: ctrl.amazonAds[adsIndex++]),
                 ],
               );
             }

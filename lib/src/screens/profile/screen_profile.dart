@@ -158,7 +158,7 @@ class _ProfileScreen extends StatelessWidget {
                     onTap: () => ctrl.goToCommitDetail(c),
                     isLast: c == commits.last,
                   ),
-                  CustomAdWidget(item: ctrl.ads.hasAmazonAds ? ctrl.amazonAds[adsIndex++] : ctrl.nativeAds[adsIndex++]),
+                  CustomAdWidget(item: ctrl.amazonAds[adsIndex++]),
                 ],
               );
             }
