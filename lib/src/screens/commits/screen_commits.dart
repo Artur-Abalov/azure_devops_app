@@ -66,13 +66,13 @@ class _CommitsScreen extends StatelessWidget {
             final c = commits![index];
 
             if (ctrl.shouldShowNativeAd(commits, c, adsIndex)) {
-                return Column(
-                  children: [
-                    CommitListTile(commit: c, onTap: () => ctrl.goToCommitDetail(c), isLast: c == commits.last),
-                    CustomAdWidget(item: ctrl.amazonAds[adsIndex++]),
-                  ],
-                );
-              }
+              return Column(
+                children: [
+                  CommitListTile(commit: c, onTap: () => ctrl.goToCommitDetail(c), isLast: c == commits.last),
+                  CustomAdWidget(item: ctrl.amazonAds[adsIndex++]),
+                ],
+              );
+            }
 
             return CommitListTile(commit: c, onTap: () => ctrl.goToCommitDetail(c), isLast: c == commits.last);
           }),
