@@ -24,7 +24,7 @@ mixin AdsMixin {
 
   /// Whether to show a native ad at the given [index] inside [items] list.
   bool shouldShowNativeAd<T>(List<T> items, T item, int index) =>
-      items.indexOf(item) % 5 == 4 && item != items.first && index < (_hasAmazonAds ? amazonAds.length : 0);
+      items.indexOf(item) % 5 == 4 && item != items.first && index < amazonAds.length;
 
   Future<void> showInterstitialAd(AdsService ads, {VoidCallback? onDismiss}) async {
     await ads.showInterstitialAd(onDismiss: onDismiss);
