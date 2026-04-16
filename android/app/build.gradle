@@ -87,7 +87,7 @@ android {
         }
 
         release {
-           signingConfig signingConfigs.release
+           // signingConfig signingConfigs.release
            manifestPlaceholders.msalProdPath = dartEnvironmentVariables.MSAL_PROD_PATH + "="
            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
