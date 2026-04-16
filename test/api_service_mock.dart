@@ -38,7 +38,6 @@ import 'package:azure_devops/src/services/purchase_service.dart';
 import 'package:azure_devops/src/services/storage_service.dart';
 import 'package:azure_devops/src/theme/theme.dart';
 import 'package:flutter/material.dart';
-import 'package:google_mobile_ads/src/ad_containers.dart';
 
 final mockTheme = ThemeData(
   extensions: [AppColorsExtension(background: Colors.white, onBackground: Colors.black)],
@@ -959,11 +958,6 @@ class AdsServiceMock implements AdsService {
 
   @override
   Future<void> showInterstitialAd({VoidCallback? onDismiss}) async {}
-
-  @override
-  Future<List<AdWithView>> getNewNativeAds() async {
-    return [];
-  }
 
   @override
   Future<List<AmazonItem>> getNewAmazonAds() async {

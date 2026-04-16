@@ -49,9 +49,8 @@ dependencies:
   xml: ^6.3.0
   purple_theme:
    git:
-    url: https://github.com/PurpleSoftSrl/flutter_theme_manager
-    ref: main
-  google_mobile_ads: ^6.0.0
+     url: https://github.com/PurpleSoftSrl/flutter_theme_manager
+     ref: main
   purchases_flutter: ^9.9.10
 
 dev_dependencies:
@@ -64,9 +63,6 @@ dev_dependencies:
 
 
 flutter:
-  config:
-    enable-swift-package-manager: false # google_mobile_ads does not support SPM
-  
   uses-material-design: true
 
   assets:

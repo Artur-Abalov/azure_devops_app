@@ -139,7 +139,7 @@ class _WorkItemsScreen extends StatelessWidget {
               return Column(
                 children: [
                   _WorkItemListTile(item: i, onTap: () => ctrl.goToWorkItemDetail(i), isLast: i == items.last),
-                  CustomAdWidget(item: ctrl.ads.hasAmazonAds ? ctrl.amazonAds[adsIndex++] : ctrl.nativeAds[adsIndex++]),
+                  CustomAdWidget(item: ctrl.amazonAds[adsIndex++]),
                 ],
               );
             }
